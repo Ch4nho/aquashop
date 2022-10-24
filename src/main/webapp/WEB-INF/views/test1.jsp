@@ -9,6 +9,7 @@
 <body>
 <%
 	out.println("Hello World");
+	out.println("commit test");
 %>
 </body>
 </html>
