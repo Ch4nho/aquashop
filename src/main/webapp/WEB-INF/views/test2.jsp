@@ -8,9 +8,8 @@
 </head>
 <body>
 <%
-	out.println("Hello World");
-	out.println("commit test");
+	out.println("Hello World2");
+	out.println("commit test2");
 %>
-123
 </body>
 </html>
