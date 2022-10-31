@@ -27,6 +27,13 @@ header.navbar {
   position: static;
   max-width: 640px;
 }
+.header-h3 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 16px;
+}
 .p-h {
   position: fixed;
   top: 0px;
@@ -49,22 +56,23 @@ header.navbar {
 .svg-in {
     margin-right: auto;
 }
+.svg-in2 {
+    margin-left: auto;
+}
 .svg-in svg {
     width: 28px;
     height: 28px;
 }
 
-
 .login-wrap {
     max-height: calc(100vh - 56px);
 }
 .login-text {
-    margin-top: 26px;
     white-space: pre-line;
 }
 .login-text-inner {
     background: transparent;
-    padding: 14px 24px 18px;
+    padding: 14px 24px 4px;
 }
 .login-title {
     display: flex;
@@ -137,9 +145,42 @@ header.navbar {
     height: 46px;
     font-size: 16px;
 }
-
+.mini {
+    width: 7em;
+}
+.input-form-box-btn {
+    display: inline-block;
+    padding: 0.5em 1em;
+    margin: 0.4em 0.15em;
+    border: 1px solid #ccc;
+    border-color: #dbdbdb #d2d2d2 #b2b2b2 #d2d2d3;
+    cursor: pointer;
+    color: #464646;
+    border-radius: 0.2em;
+    vertical-align: middle;
+    font-size: 1em;
+    line-height: 1.25em;
+}
+.middle {
+    width: 18.3em;
+}
 .login-form .inputBtnPw {
-    margin-bottom: 16px;
+    margin-bottom: 8px;
+}
+.login-input-label {
+    display: inline-block;
+    margin: 16px 0 8px;
+}
+.login-input-essential {
+    display: inline-block;
+    overflow: hidden;
+    width: 4px;
+    height: 4px;
+    margin-top: 4px;
+    border-radius: 50%;
+    background-color: red;
+    text-indent: -9999px;
+    vertical-align: text-top;
 }
 .svg-icon2 {
     position: absolute;
@@ -153,7 +194,7 @@ header.navbar {
     display: inline-block;
     padding: 0px;
     border: none;
-    background: transparent;
+    background-color: transparent;
     font-size: 0px;
     cursor: pointer;
 }
@@ -170,6 +211,8 @@ header.navbar {
 
 
 button {
+    border: none;
+    background-color: transparent;
     writing-mode: horizontal-tb !important;
     text-rendering: auto;
     letter-spacing: normal;

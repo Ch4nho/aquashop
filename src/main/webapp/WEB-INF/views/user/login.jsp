@@ -17,12 +17,21 @@
           <header class="navbar page-header false p-h">
             <div class="svg-inner">
               <div class="svg-in">
-                <svg class="svgIcon  svg-icon" role="img" aria-label="arrowleft"
-                  viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none">
-                  <path d="M15 5L8 12L15 19" stroke="#202429" stroke-width="1.5" stroke-linecap="round"
-                    stroke-linejoin="round">
-                  </path>
+                <button type="button" name="back">
+                  <svg class="svgIcon svg-icon" role="img" aria-label="arrowleft"
+                    viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none">
+                    <path d="M15 5L8 12L15 19" stroke="#202429" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
                 </svg>
+                </button>
+              </div>
+              <div></div>
+              <div class="svg-in2">
+                <button type="button" name="close">
+                  <svg class="svgIcon svg-icon" role="img" aria-label="닫기" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none">
+                    <path d="M5 5L19 19" stroke="#202429" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M19 5L5 19" stroke="#202429" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                  </svg>
+                </button>
               </div>
             </div>
           </header>
@@ -31,11 +40,9 @@
           <div class="loginTitle login-text">
             <div class="section-header login-text-inner">
               <div class="title-wrap login-title">
-                <h3 class="title display2 bold login-h">안녕하세요
-                  AQUA입니다</h3>
+                <h3 class="title display2 bold login-h">안녕하세요 AQUA입니다</h3>
               </div>
-              <p class="subTitle body2 login-p">회원가입이나
-                로그인이 가능합니다.</p>
+              <p class="subTitle body2 login-p">회원가입이나 로그인이 가능합니다.</p>
             </div>
           </div>
           
