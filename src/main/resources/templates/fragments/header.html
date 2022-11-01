@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<div th:fragment="header">
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="/"><img th:src="@{/images/aqualogo.jpg}" width="60" height="60"/></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="/admin/item/new">상품 등록</a>
+      </li>
+       <li class="nav-item">
+        <a class="nav-link" href="/admin/items">상품 관리</a>
+      </li>
+       <li class="nav-item">
+        <a class="nav-link" href="/cart">장바구니</a>
+      </li>
+       <li class="nav-item">
+        <a class="nav-link" href="/orders">구매이력</a>
+      </li>
+       <li class="nav-item">
+        <a class="nav-link" href="/members/login">로그인</a>
+      </li>
+       <li class="nav-item">
+        <a class="nav-link" href="/members/logout">로그아웃</a>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+	</nav>
+	</div>
+</html>
