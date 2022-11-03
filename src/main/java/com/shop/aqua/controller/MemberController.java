@@ -5,6 +5,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.shop.aqua.dto.JoinDto;
 import com.shop.aqua.service.MemberService;
@@ -18,6 +19,11 @@ public class MemberController {
 	
 	private final MemberService memberService;
 	private final PasswordEncoder passwordEncoder;
+	
+	@GetMapping("/test")
+	public @ResponseBody String root() throws Exception {
+		return "test";
+	}
 	
 	@GetMapping("/new")
 	public String join(Model model) {
