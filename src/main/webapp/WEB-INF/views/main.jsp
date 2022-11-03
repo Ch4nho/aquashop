@@ -3,9 +3,9 @@
 <!DOCTYPE html>
 <html>
 <head>
+<%@include file="header.jsp" %>
 <title>AQUA MAIN</title>
 </head>
-<%@include file="header.jsp" %>
 
 <body>
 	<!-- Start of Container -->
@@ -58,7 +58,7 @@
 						<ul class="main-prd-item">
 							<li class="prd-item-company">제조사</li> <!-- 제조사 -->
 							<li class="prd-item-name">상품명</li> <!-- 상품명 -->
-							<li class="prd-item-price"><fmt:formatNumber value="${product.price}" type="number" />가격</li> <!-- 가격 -->
+							<li class="prd-item-price"><fmt:formatNumber value="" type="number" />가격</li> <!-- 가격 -->
 						</ul>
 					</div>	
 				</c:forEach>	

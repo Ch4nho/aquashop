@@ -1,6 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<link rel="stylesheet" type="text/css" href="css/style.css">
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="/resources/css/style.css">
+<title>join</title>
+</head>
 
 <body>
 	<div id="login-site">
@@ -81,10 +87,19 @@
 									<div class="input input-box">
 										<span class="login-input-essential">필수 입력</span>
 										<label class="login-input-label">이메일 </label>
-										<input placeholder="이메일" name="email" class="input-form-box" value="">
+										<input placeholder="이메일 입력" name="email" class="input-form-box" value="">
 									</div>
 								</div>
 							</div>
+							<div class="field inputBtnId input-inner">
+                <div class="input-group input-form">
+                  <div class="input input-box">
+										<span class="login-input-essential">필수 입력</span>
+										<label class="login-input-label">휴대전화 </label>
+                    <input placeholder="휴대전화 번호 입력 ( '-' 포함)" name="phone" class="input-form-box" value="">
+									</div>
+                </div>
+              </div>
 							<div class="field inputBtnId input-inner">
 								<div class="input-group input-form">
 									<div class="input input-box">

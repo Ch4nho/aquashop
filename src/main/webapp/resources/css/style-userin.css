@@ -23,6 +23,9 @@ div {
 .Nb header.navbar {
   border-bottom: 1px solid rgb(242, 243, 245);
 }
+.hr {
+border-bottom: 3px solid #000000;
+}
 header.navbar {
   position: static;
   max-width: 640px;
@@ -163,6 +166,9 @@ header.navbar {
 }
 .middle {
     width: 18.3em;
+}
+.mypage {
+    width: 25em;
 }
 .login-form .inputBtnPw {
     margin-bottom: 8px;

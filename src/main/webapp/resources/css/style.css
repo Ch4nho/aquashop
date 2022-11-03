@@ -1,4 +1,5 @@
-@import url("/shop/css/style-header.css");
-@import url("/shop/css/style-index.css");
-@import url("/shop/css/style-userin.css");;
-@import url("/shop/css/style-footer.css");
+@import url("style-header.css");
+@import url("style-index.css");
+@import url("style-userin.css");
+@import url("style-footer.css");
+@import url("style-common.css");

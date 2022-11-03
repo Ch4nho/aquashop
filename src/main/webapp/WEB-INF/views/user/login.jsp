@@ -4,10 +4,10 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="/resources/css/style.css">
 <title>login</title>
 </head>
-<body>
-<link rel="stylesheet" type="text/css" href="resources/css/style.css">
+
 
 <body>
   <div id="login-site">
@@ -93,13 +93,13 @@
             </div>
             
             <div class="iconBtnWrap sns-form"><a>
-                <h1 class="ir">kakao</h1><span><img src="resources/img/ic_kakao.svg" alt="카카오톡" class="snsIcon"></span>
+                <h1 class="ir">kakao</h1><span><img src="/resources/img/ic_kakao.svg" alt="카카오톡" class="snsIcon"></span>
               </a><a>
-                <h1 class="ir">facebook</h1><span><img src="resources/img/ic_facebook.svg" alt="페이스북" class="snsIcon"></span>
+                <h1 class="ir">facebook</h1><span><img src="/resources/img/ic_facebook.svg" alt="페이스북" class="snsIcon"></span>
               </a><a class="google">
-                <h1 class="ir">google</h1><span><img src="resources/img/ic_google.svg" alt="구글" class="snsIcon"></span>
+                <h1 class="ir">google</h1><span><img src="/resources/img/ic_google.svg" alt="구글" class="snsIcon"></span>
               </a><a>
-                <h1 class="ir">naver</h1><span><img src="resources/img/ic_naver.svg" alt="네이버" class="snsIcon"></span>
+                <h1 class="ir">naver</h1><span><img src="/resources/img/ic_naver.svg" alt="네이버" class="snsIcon"></span>
               </a>
             </div>  <!-- iconBtnWrap end-->
             

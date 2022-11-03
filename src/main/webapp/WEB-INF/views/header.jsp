@@ -5,8 +5,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/resources/css/style.css" >
+
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-<link rel="stylesheet" type="text/css" href="resources/css/style.css">
 <!-- material icon -->
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <!-- jquery -->
@@ -28,7 +29,7 @@
 <!-- Iamport -->
 <script type="text/javascript" src="https://cdn.iamport.kr/js/iamport.payment-1.1.5.js"></script>
 <!-- End of Script -->
-<title>header</title>
+<title>AQUA</title>
 </head>
 
 <body>
@@ -36,7 +37,7 @@
 	<header>
 		<div id="header-first">
 			<div id="header-logo">
-				<a href="#"><img src="aqualogo.jpg" id="header-logo-img" /></a>
+				<a href="#"><img src="/resources/img/aqualogo.jpg" id="header-logo-img" /></a>
 			</div>
 			<form id="headerSearchForm" method="POST" action="#"> 
 				<button class="headerSearchForm-btn">
@@ -94,17 +95,6 @@
 				</c:choose>
 				<c:choose>
 					<c:when test="${pageContext.request.requestURI eq '#' }">
-						<button type="button" id="header-sec-rank"
-							class="btn btn-basic header-second-btn-group border-btm-blue"
-							onclick="location.href='#';">item</button>
-					</c:when>
-					<c:otherwise>
-						<button type="button" id="header-sec-rank"
-							class="btn btn-basic header-second-btn-group"
-							onclick="location.href='#';">item</button>
-					</c:otherwise>
-					<c:when
-						test="${pageContext.request.requestURI eq '#' }">
 						<button type="button" id="header-sec-rank"
 							class="btn btn-basic header-second-btn-group border-btm-blue"
 							onclick="location.href='#';">item</button>
