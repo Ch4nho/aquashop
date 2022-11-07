@@ -14,8 +14,7 @@ public class HelloController {
 	}
 
 	@RequestMapping("/test1")
-	public String test1(Model model) {
-		model.addAttribute("data", "hello, test1");
+	public String test1() {
 		return "test1";
 	}
 }

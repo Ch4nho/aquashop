@@ -9,5 +9,4 @@ public class AquashopApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(AquashopApplication.class, args);
 	}
-
 }
