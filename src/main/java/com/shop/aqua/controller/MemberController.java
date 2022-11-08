@@ -20,11 +20,6 @@ public class MemberController {
 	private final MemberService memberService;
 	private final PasswordEncoder passwordEncoder;
 	
-	@GetMapping("/test")
-	public @ResponseBody String root() throws Exception {
-		return "test";
-	}
-	
 	@GetMapping("/new")
 	public String join(Model model) {
 		model.addAttribute("joinDto", new JoinDto());
