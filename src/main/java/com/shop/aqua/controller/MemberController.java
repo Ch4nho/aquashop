@@ -8,7 +8,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.shop.aqua.dto.JoinDto;
-import com.shop.aqua.entity.Member;
 import com.shop.aqua.service.MemberService;
 
 import lombok.RequiredArgsConstructor;
@@ -30,13 +29,5 @@ public class MemberController {
 	public String join(Model model) {
 		model.addAttribute("joinDto", new JoinDto());
 		return "user/join";
-	}
-	
-	public String join(JoinDto joinDto) {
-		
-		Member member = Member.createMember(joinDto, passwordEncoder);
-		memberService.saveMember(member);
-		
-		return "redirect:/";
 	}
 }
