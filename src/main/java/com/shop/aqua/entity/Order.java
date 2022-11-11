@@ -1,0 +1,57 @@
+package com.shop.aqua.entity;
+
+import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
+import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
+import javax.persistence.Table;
+
+import com.shop.aqua.constrant.OrderStatus;
+
+import lombok.Getter;
+import lombok.Setter;
+
+@Entity
+@Table(name = "orders")
+@Getter @Setter
+public class Order {
+	
+	@Id
+	@GeneratedValue
+	@Column(name = "order_id")
+	private Long id; // 주문 id
+	
+	
+	
+    @ManyToOne(fetch = FetchType.LAZY) // N:1 member를 사용하는 클래스가 다수
+	@JoinColumn(name="member_id")
+	private Member member; //주문 회원 id
+	
+	private LocalDateTime orderAt; // 주문일
+	
+	@Enumerated(EnumType.STRING)
+	private OrderStatus orderStatus; // 주문상태
+	
+	@OneToMany(mappedBy = "order")
+	private List<OrderProduct> orderProducts = new ArrayList<>();
+	
+	
+	
+	  private LocalDateTime createAt; 
+	  private LocalDateTime modifiendAt; // 수정시간
+	
+	
+	
+	
+	
+}
