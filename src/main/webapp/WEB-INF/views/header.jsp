@@ -60,7 +60,7 @@
 				<c:otherwise>
 					<div id="header-main-menu">
 						<a href="#" class="header-sub-menu">로그인</a>
-						<a href="#" class="header-sub-menu">회원가입</a>
+						<a href="/members/new" class="header-sub-menu">회원가입</a>
 					</div>
 				</c:otherwise>
 			</c:choose>
