@@ -46,7 +46,7 @@
 						</div>
 					</div>
 					<div class="loginInputWrap login-form">
-						<form method="post" action="#">
+						<form method="post" action="/members/new">
 							<!-- 회원가입 폼 시작-->
 							<div class="field inputBtnId input-inner">
 								<div class="input-group input-form">
