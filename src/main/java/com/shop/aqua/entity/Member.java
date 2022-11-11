@@ -1,55 +1,69 @@
 package com.shop.aqua.entity;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.EnumType;
-import javax.persistence.Enumerated;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
-
+import javax.persistence.*;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
-import com.shop.aqua.constant.Role;
-import com.shop.aqua.dto.JoinDto;
+import com.shop.aqua.constrant.Role;
+import com.shop.aqua.dto.MemberFormDto;
 
-import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
+import lombok.ToString;
+
+
 
 @Entity
 @Table(name="member")
-@Data
-public class Member {
+@Getter
+@Setter
+@ToString
+public class Member extends BaseEntity{
+	
+	
 	
 	@Id
 	@Column(name="member_id")
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	private Long id;		//회원 번호
+	private Long id; 	// 회원 번호
+
+	private String memberName;	// 회원 이름
+	
+	private String userId;	// 아이디
 	
 	@Column(unique = true)
-	private String username; //회원 아이디
+	private String email; 
 	
-	private String name;	//이름
+
+	private String memberAddress;
+	private String zipcode;
+	private String address_detail;
 	
-	private String password; //비밀번호
+	private String Phone;
 	
-	@Column(unique = true)
-	private String email;	 //이메일
-	
-	private String address;	 //주소
+	private String memberPw;
 	
 	@Enumerated(EnumType.STRING)
-	private Role role;		//권한
+	private Role role;
 	
-	public static Member createMember(JoinDto joinDto, PasswordEncoder passwordEncoder) {
-		Member member = new Member();
-		member.setUsername(joinDto.getUsername());
-		member.setName(joinDto.getName());
-		member.setEmail(joinDto.getEmail());
-		member.setAddress(joinDto.getAddress());
-		String password = passwordEncoder.encode(joinDto.getPassword());
-		member.setPassword(password);
-		member.setRole(Role.USER);
-		return member;
-	}
+	
+	//member테이블에 회원생성
+    public static  Member createMember(MemberFormDto memberFormDto, PasswordEncoder passwordEncoder){
+        Member member = new Member();
+    	member.setMemberName(memberFormDto.getMemberName());
+        member.setUserId(memberFormDto.getUserId());
+        member.setEmail(memberFormDto.getEmail());
+        member.setZipcode(memberFormDto.getZipcode());
+        member.setMemberAddress(memberFormDto.getMemberAddress());
+        member.setAddress_detail(memberFormDto.getAddress_detail());
+        member.setPhone(memberFormDto.getPhone());
+        String password = passwordEncoder.encode(memberFormDto.getMemberPw()) ;
+        member.setMemberPw(password);
+        member.setRole(Role.USER);	// 상품 등록 관리는 ADMIN만 가능하다.
+        return member;
+    }
+
+
+
+
+
 }
