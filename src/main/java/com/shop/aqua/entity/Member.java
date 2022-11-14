@@ -38,6 +38,8 @@ public class Member {
 	
 	private String address;	 //주소
 	
+	private String phone;   //전화번호
+	
 	@Enumerated(EnumType.STRING)
 	private Role role;		//권한
 	
@@ -49,6 +51,7 @@ public class Member {
 		member.setAddress(joinDto.getAddress());
 		String password = passwordEncoder.encode(joinDto.getPassword());
 		member.setPassword(password);
+		member.setPhone(joinDto.getPhone());
 		member.setRole(Role.USER);
 		return member;
 	}
