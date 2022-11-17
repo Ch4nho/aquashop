@@ -22,14 +22,16 @@ public class MemberController {
 	private final MemberService memberService;
 	private final PasswordEncoder passwordEncoder;
 	
+	// 회원가입_GET
 	@GetMapping("/members/new")
 	public String join(Model model) {
 		model.addAttribute("joinDto", new JoinDto());
 		return "user/join";
 	}
 	
+	// 회원가입_POST
 	@PostMapping("/members/new")
-	public String join(@Valid JoinDto joinDto, BindingResult bindingResult, Model model) {
+	public String newMember(@Valid JoinDto joinDto, BindingResult bindingResult, Model model) {
 		
 		if(bindingResult.hasErrors()) {
 			return "user/join";
@@ -43,6 +45,8 @@ public class MemberController {
 			return "user/join";
 		}
 		
-		return "redirect:/";
+		System.out.println(joinDto.toString());
+		
+		return "redirect:/";		// 회원가입 후 메인페이지로 이동
 	}
 }

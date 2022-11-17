@@ -1,6 +1,5 @@
 package com.shop.aqua.service;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -22,10 +21,9 @@ public class MemberService {
 	}
 
 	private void validateDuplicateMember(Member member) {
-		memberRepository.findByUsername(member.getUsername())
-						.ifPresent(m -> {
-							throw new IllegalStateException("이미 가입된 회원입니다.");
-						});
-		
+		Member findMember = memberRepository.findByEmail(member.getEmail());
+		if(findMember != null) {
+			throw new IllegalStateException("이미 가입된 회원입니다.");
+		}
 	}
 }

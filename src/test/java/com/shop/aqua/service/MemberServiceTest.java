@@ -27,11 +27,12 @@ class MemberServiceTest {
 
 	public Member createMember() {
 		JoinDto joinDto = new JoinDto();
-		joinDto.setUsername("test");
-		joinDto.setName("테스트 이름");
-		joinDto.setPassword("1234");
-		joinDto.setEmail("test@email.com");
-		joinDto.setAddress("서울시 마포구");
+		joinDto.setUsername("test");  //아이디
+		joinDto.setName("테스트 이름");  //이름
+		joinDto.setPassword("1234");  //비밀번호
+		joinDto.setEmail("test@email.com");  //이메일
+		joinDto.setAddress("서울시 마포구");    //주소
+		joinDto.setPhone("010-1234-1111");
 	
 		return Member.createMember(joinDto, passwordEncoder);
 	}
@@ -47,6 +48,7 @@ class MemberServiceTest {
 		assertEquals(member.getPassword(), savedMember.getPassword());
 		assertEquals(member.getEmail(), savedMember.getEmail());
 		assertEquals(member.getAddress(), savedMember.getAddress());
+		assertEquals(member.getPhone(), savedMember.getPhone());
 	}
 	
 	@Test
