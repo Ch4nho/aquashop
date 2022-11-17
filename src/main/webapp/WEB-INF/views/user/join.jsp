@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -46,14 +47,16 @@
 						</div>
 					</div>
 					<div class="loginInputWrap login-form">
-						<form method="post" action="/members/new">
+						<form:form modelAttribute="joinDto" action="/members/new" method="post">
 							<!-- 회원가입 폼 시작-->
 							<div class="field inputBtnId input-inner">
 								<div class="input-group input-form">
 									<div class="input input-box">
 										<span class="login-input-essential">필수 입력</span>
 										<label class="login-input-label">이름 </label>
-										<input placeholder="이름 입력" name="name" class="input-form-box" value="">
+										<form:input path="name" placeholder="이름 입력" class="input-form-box" />
+										<form:errors path="name" />
+										<!-- <input placeholder="이름 입력" name="name" class="input-form-box" value=""> -->
 									</div>
 								</div>
 							</div>
@@ -62,7 +65,9 @@
 									<div class="input input-box">
 										<span class="login-input-essential">필수 입력</span>
 										<label class="login-input-label">아이디 </label>
-										<input placeholder="아이디 입력" name="id" class="input-form-box" value="">
+										<form:input path="username" placeholder="아이디 입력" class="input-form-box" />
+										<form:errors path="username" />
+										<!-- <input placeholder="아이디 입력" name="id" class="input-form-box" value=""> -->
 									</div>
 								</div>
 							</div>
@@ -71,14 +76,18 @@
 									<div class="input input-box">
 										<span class="login-input-essential">필수 입력</span>
 										<label class="login-input-label">비밀번호 </label>
-										<input placeholder="비밀번호 입력" type="password" name="password" autocomplete="off" class="input-form-box" value="">
+										<form:password path="password" placeholder="비밀번호 입력" autocomplete="off" class="input-form-box"/>
+										<form:errors path="password" />
+										<!-- <input placeholder="비밀번호 입력" type="password" name="password" autocomplete="off" class="input-form-box" value=""> -->
 									</div>
 								</div>
 							</div>
 							<div class="field inputBtnPw input-inner">
 								<div class="input-group input-form">
 									<div class="input input-box">
-										<input placeholder="비밀번호 재입력" type="password" name="password2" autocomplete="off" class="input-form-box" value="">
+										<form:password path="password2" placeholder="비밀번호 입력" autocomplete="off" class="input-form-box"/>
+										<form:errors path="password2" />
+										<!-- <input placeholder="비밀번호 재입력" type="password" name="password2" autocomplete="off" class="input-form-box" value=""> -->
 									</div>
 								</div>
 							</div>
@@ -87,7 +96,9 @@
 									<div class="input input-box">
 										<span class="login-input-essential">필수 입력</span>
 										<label class="login-input-label">이메일 </label>
-										<input placeholder="이메일 입력" name="email" class="input-form-box" value="">
+										<form:input path="email" placeholder="이메일 입력" class="input-form-box" />
+										<form:errors path="email" />
+										<!-- <input placeholder="이메일 입력" name="email" class="input-form-box" value=""> -->
 									</div>
 								</div>
 							</div>
@@ -96,7 +107,9 @@
                   <div class="input input-box">
 										<span class="login-input-essential">필수 입력</span>
 										<label class="login-input-label">휴대전화 </label>
-                    <input placeholder="휴대전화 번호 입력 ( '-' 포함)" name="phone" class="input-form-box" value="">
+										<form:input path="phone" placeholder="휴대전화 번호 입력" class="input-form-box" />
+										<form:errors path="phone" />
+                    <!-- <input placeholder="휴대전화 번호 입력 ( '-' 포함)" name="phone" class="input-form-box" value=""> -->
 									</div>
                 </div>
               </div>
@@ -105,7 +118,9 @@
 									<div class="input input-box">
 										<span class="login-input-essential">필수 입력</span>
 										<label class="login-input-label">주소 </label><br>
-										<input type="text" class="input-form-box mini" id="sample6_postcode" placeholder="우편번호">
+										
+										<form:input path="address" type="text" class="input-form-box mini" id="sample6_postcode" placeholder="우편번호" />
+										<form:errors path="address" />
 										<input type="button" class="input-form-box-btn" onclick="sample6_execDaumPostcode()" value="우편번호 찾기"><br>
 										<input type="text" class="input-form-box" id="sample6_address" placeholder="주소"><br>
 										<input type="text" class="input-form-box middle" id="sample6_detailAddress" placeholder="상세주소">
@@ -116,7 +131,8 @@
 							<button type="submit" class="loginBtn loginBtn-form">
 								<span class="text button1 bold">회원가입</span>
 							</button>
-						</form>	<!-- 회원 가입 폼 끝 -->
+							<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}">
+						</form:form>	<!-- 회원 가입 폼 끝 -->
 					</div>
 					<!-- loginInputWrap end-->
 				</div>

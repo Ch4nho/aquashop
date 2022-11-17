@@ -26,12 +26,13 @@ public class Member {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;		//회원 번호
 	
-	@Column(unique = true)
 	private String username; //회원 아이디
 	
 	private String name;	//이름
 	
 	private String password; //비밀번호
+	
+	private String password2; //비밀번호확인
 	
 	@Column(unique = true)
 	private String email;	 //이메일
@@ -51,6 +52,8 @@ public class Member {
 		member.setAddress(joinDto.getAddress());
 		String password = passwordEncoder.encode(joinDto.getPassword());
 		member.setPassword(password);
+		String password2 = passwordEncoder.encode(joinDto.getPassword2());
+		member.setPassword2(password2);
 		member.setPhone(joinDto.getPhone());
 		member.setRole(Role.USER);
 		return member;
