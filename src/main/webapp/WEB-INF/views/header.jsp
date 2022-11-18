@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ taglib uri="http://www.springframework.org/security/tags" prefix="sec" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -56,15 +57,18 @@
 						</c:if>
 						<a href="#" class="header-sub-menu">장바구니</a>
 						<a href="#" class="header-sub-menu">정보수정</a>
-						<sec:authorize access="isAuthenticated()">
+						<%-- <sec:authorize access="isAuthenticated()">
 						<a href="/user/logout" class="header-sub-menu">로그아웃</a>
-						</sec:authorize>
+						</sec:authorize> --%>
 					</div>
 				</c:when>
 				<c:otherwise>
 					<div id="header-main-menu">
 						<sec:authorize access="isAnonymous()">
 						<a href="/user/login" class="header-sub-menu">로그인</a>
+						</sec:authorize>
+						<sec:authorize access="isAuthenticated()">
+						<a href="/user/logout" class="header-sub-menu">로그아웃</a>
 						</sec:authorize>
 						<a href="/members/new" class="header-sub-menu">회원가입</a>
 					</div>
