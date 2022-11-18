@@ -7,5 +7,6 @@ import com.shop.aqua.entity.Member;
 public interface MemberRepository extends JpaRepository<Member, Long> {
 	
 	Member findByEmail(String email);
+	Member findByUsername(String username);
 
 }
