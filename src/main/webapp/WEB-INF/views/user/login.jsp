@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -47,12 +48,13 @@
           </div>
           
           <div class="loginInputWrap login-form">
-            <form method="post" action="#">
+            <form method="post" action="/user/login">
               <!-- 로그인 폼 시작-->
               <div class="field inputBtnId input-inner">
                 <div class="input-group input-form">
                   <div class="input input-box">
-                    <input placeholder="아이디 입력" name="nickname" class="input-form-box" value=""></div>
+                  	<input type="text" placeholder="아이디 입력" name="username" class="input-form-box" value=""></div>
+                   <!--  <input placeholder="아이디 입력" name="nickname" class="input-form-box" value=""></div> -->
                 </div>
               </div>
               <div class="field inputBtnPw input-inner">
@@ -73,7 +75,10 @@
                   </div>
                 </div>
               </div>
+              <%-- <p><c:if test="${loginErrorMsg}"> ${loginErrorMsg} </c:if> </p> --%>
+              <p><c:out value="${loginErrorMsg}"></c:out> </p>
               <button type="submit" class="loginBtn loginBtn-form"><span class="text button1 bold">로그인</span></button>
+              <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}">
             </form>
             
             <div class="textBtnWrap tB-form">
@@ -83,7 +88,7 @@
               <button class="textButton  tB-css" type="button">
                 <span class="text button2">비밀번호 찾기</span>
               </button>
-              <button class="textButton  tB-css" type="button">
+              <button class="textButton  tB-css" type="button" onclick="location.href='/members/new'">
                 <span class="text button2">회원가입</span>
               </button>
             </div>
