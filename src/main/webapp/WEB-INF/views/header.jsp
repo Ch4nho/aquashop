@@ -55,11 +55,6 @@
 							<a href="#" class="header-sub-menu">상품등록</a>
 							<a href="#" class="header-sub-menu">상품수정</a>
 						</c:if>
-						<a href="#" class="header-sub-menu">장바구니</a>
-						<a href="#" class="header-sub-menu">정보수정</a>
-						<%-- <sec:authorize access="isAuthenticated()">
-						<a href="/user/logout" class="header-sub-menu">로그아웃</a>
-						</sec:authorize> --%>
 					</div>
 				</c:when>
 				<c:otherwise>
@@ -69,6 +64,12 @@
 						</sec:authorize>
 						<sec:authorize access="isAuthenticated()">
 						<a href="/user/logout" class="header-sub-menu">로그아웃</a>
+						</sec:authorize>
+						<sec:authorize access="isAuthenticated()">
+						<a href="#" class="header-sub-menu">장바구니</a>
+						</sec:authorize>
+						<sec:authorize access="isAuthenticated()">
+						<a href="#" class="header-sub-menu">정보수정</a>
 						</sec:authorize>
 						<a href="/members/new" class="header-sub-menu">회원가입</a>
 					</div>
