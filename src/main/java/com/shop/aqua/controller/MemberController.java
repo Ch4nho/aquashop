@@ -8,6 +8,7 @@ import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.shop.aqua.dto.JoinDto;
 import com.shop.aqua.entity.Member;
@@ -49,4 +50,16 @@ public class MemberController {
 		
 		return "redirect:/";		// 회원가입 후 메인페이지로 이동
 	}
+	
+	@RequestMapping("/user/login")
+	public String loginMember() throws Exception {
+		return "/user/login";
+	}
+	
+	@RequestMapping("/user/login/error")
+	public String loginError(Model model) {
+		model.addAttribute("loginErrorMsg", "아이디 또는 비밀번호를 확인해주세요");
+		return "/user/login";
+	}
+	
 }
