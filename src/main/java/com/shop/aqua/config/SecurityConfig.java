@@ -25,7 +25,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 	public void configure(WebSecurity web) throws Exception {		//인증을 무시할 경로를 설정
 		web.ignoring().antMatchers("/css/**", "/js/**", "/img/**");
 	}
-
+	
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
 		http.formLogin()
@@ -38,7 +38,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 			.logoutRequestMatcher(new AntPathRequestMatcher("/user/logout")) //로그아웃 url 설정
 			.logoutSuccessUrl("/");		//로그아웃 성공 시 이동할 url 설정
 	}
-	
+		
 	@Bean
 	public PasswordEncoder passwordEncoder() {
 		return new BCryptPasswordEncoder();
@@ -48,5 +48,9 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 	protected void configure(AuthenticationManagerBuilder auth) throws Exception {
 		auth.userDetailsService(memberService)
 			.passwordEncoder(passwordEncoder());
+		
+		// 관리자 계정 추가. admin/1111로 로그인
+		String password = passwordEncoder().encode("1111");
+		auth.inMemoryAuthentication().withUser("admin").password(password).roles("ADMIN");
 	}
 }

@@ -48,13 +48,15 @@
 				<input name="keyword" placeholder="상품명 또는 브랜드명으로 검색"
 					class="headerSearchForm-input" />
 			</form>
-			<c:choose>
-				<c:when test="${sessionScope.principal != null}">
+	 	<%-- 	<c:choose>
+				 <c:when test="${sessionScope.principal != null}">
 					<div id="header-main-menu">
 						<c:if test="${sessionScope.principal.auth eq 'admin' }">
 							<a href="#" class="header-sub-menu">상품등록</a>
 							<a href="#" class="header-sub-menu">상품수정</a>
 						</c:if>
+						<a href="#" class="header-sub-menu">장바구니</a>
+						<a href="#" class="header-sub-menu">정보수정</a>
 					</div>
 				</c:when>
 				<c:otherwise>
@@ -74,7 +76,34 @@
 						<a href="/members/new" class="header-sub-menu">회원가입</a>
 					</div>
 				</c:otherwise>
-			</c:choose>
+			</c:choose> --%>
+			
+					
+					<div id="header-main-menu">
+						<sec:authorize access="hasAnyAuthority('ROLE_ADMIN')">
+						<a href="#" class="header-sub-menu">상품등록</a>
+						</sec:authorize>
+						<sec:authorize access="hasAnyAuthority('ROLE_ADMIN')">
+						<a href="#" class="header-sub-menu">상품수정</a>
+						</sec:authorize>
+						<sec:authorize access="hasAnyAuthority('ROLE_USER')">
+						<a href="#" class="header-sub-menu">장바구니</a>
+						</sec:authorize>
+						<sec:authorize access="hasAnyAuthority('ROLE_USER')">
+						<a href="#" class="header-sub-menu">정보수정</a>
+						</sec:authorize>
+						<sec:authorize access="isAnonymous()">
+						<a href="/user/login" class="header-sub-menu">로그인</a>
+						</sec:authorize>
+						<sec:authorize access="isAuthenticated()">
+						<a href="/user/logout" class="header-sub-menu">로그아웃</a>
+						</sec:authorize>
+						<a href="/members/new" class="header-sub-menu">회원가입</a>
+					</div> 
+					
+				
+							
+							
 		</div>
 		<!-- Start of Dropdown -->
 		<div id="header-second">
