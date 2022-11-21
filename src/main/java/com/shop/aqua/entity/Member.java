@@ -14,12 +14,15 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import com.shop.aqua.constant.Role;
 import com.shop.aqua.dto.JoinDto;
 
-import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
+import lombok.ToString;
 
 @Entity
 @Table(name="member")
-@Data
-public class Member {
+@Getter @Setter
+@ToString
+public class Member extends BaseEntity {
 	
 	@Id
 	@Column(name="member_id")

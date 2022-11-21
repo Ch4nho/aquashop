@@ -30,6 +30,7 @@ class MemberServiceTest {
 		joinDto.setUsername("test");  //아이디
 		joinDto.setName("테스트 이름");  //이름
 		joinDto.setPassword("1234");  //비밀번호
+		joinDto.setPassword2("1234"); //비밀번호 확인
 		joinDto.setEmail("test@email.com");  //이메일
 		joinDto.setAddress("서울시 마포구");    //주소
 		joinDto.setPhone("010-1234-1111");
@@ -42,7 +43,7 @@ class MemberServiceTest {
 	public void saveMemberTest() {
 		Member member = this.createMember();
 		Member savedMember = memberService.saveMember(member);
-		
+	
 		assertEquals(member.getUsername(), savedMember.getUsername());
 		assertEquals(member.getName(), savedMember.getName());
 		assertEquals(member.getPassword(), savedMember.getPassword());
