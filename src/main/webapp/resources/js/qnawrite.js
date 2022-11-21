@@ -3,7 +3,7 @@ function upload() {
 		userId: $("#userId").val(),
 		productId: $("#productId").val(),
 		optionNo: $("#optionNo").val(),
-		password: $("#password").val(),
+		password: $("#qna-password").val(),
 		detail: $("#qna-detail").val()
 	};
 
