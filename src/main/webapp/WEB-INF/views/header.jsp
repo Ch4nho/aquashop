@@ -81,7 +81,7 @@
 					
 					<div id="header-main-menu">
 						<sec:authorize access="hasAnyAuthority('ROLE_ADMIN')">
-						<a href="#" class="header-sub-menu">상품등록</a>
+						<a href="/admin/item/new" class="header-sub-menu">상품등록</a>
 						</sec:authorize>
 						<sec:authorize access="hasAnyAuthority('ROLE_ADMIN')">
 						<a href="#" class="header-sub-menu">상품수정</a>
