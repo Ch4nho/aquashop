@@ -2,14 +2,13 @@ function upload() {
 	var data = {
 		userId: $("#userId").val(),
 		productId: $("#productId").val(),
-		optionNo: $("#optionNo").val(),
-		password: $("#qna-password").val(),
-		detail: $("#qna-detail").val()
+		detail: $("#review-detail").val(),
+    image: $("#review-image").val()
 	};
 
 	$.ajax({
 		type: "POST",
-		url: "insertQna",
+		url: "#",     // 수정 필요
 		data: JSON.stringify(data),
 		contentType: "application/json; charset=utf-8",
 		dataType: "text"
@@ -24,7 +23,7 @@ function upload() {
 
 function successMessage() {
 	Swal.fire({
-		html: '문의글이 등록되었습니다.',
+		html: '리뷰가 등록되었습니다.',
 		icon: 'success',
 		timer: 2000,
 		timerProgressbar: true,
@@ -38,7 +37,7 @@ function successMessage() {
 
 function failMessage() {
 	Swal.fire({
-		html: '문의글 등록 중 오류가 발생하였습니다.',
+		html: '리뷰 등록 중 오류가 발생하였습니다.',
 		icon: 'error',
 		timer: 2000,
 		timerProgressbar: true,
