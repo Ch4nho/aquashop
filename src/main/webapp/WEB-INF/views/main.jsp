@@ -22,13 +22,13 @@
 		<!-- The slideshow -->
 		<div class="carousel-inner">
 		  <div class="carousel-item active">
-		    <img src="resources/img/noImageBanner.jpg" alt="ban-img-0" width="1100" height="500">
+		    <img src="resources/img/banner/banner01.jpg" alt="ban-img-0" width="1100" height="500">
 		  </div>
 		  <div class="carousel-item">
-		    <img src="resources/img/noImageBanner.jpg" alt="ban-img-1" width="1100" height="500">
+		    <img src="resources/img/banner/banner02.jpg" alt="ban-img-1" width="1100" height="500">
 		  </div>
 		  <div class="carousel-item">
-		    <img src="resources/img/noImageBanner.jpg" alt="ban-img-2" width="1100" height="500">
+		    <img src="resources/img/banner/banner03.jpg" alt="ban-img-2" width="1100" height="500">
 		  </div>
 		</div>
         
