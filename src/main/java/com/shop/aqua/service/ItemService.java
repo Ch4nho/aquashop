@@ -5,12 +5,15 @@ import java.util.List;
 
 import javax.persistence.EntityNotFoundException;
 
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.multipart.MultipartFile;
 
 import com.shop.aqua.dto.ItemFormDto;
 import com.shop.aqua.dto.ItemImgDto;
+import com.shop.aqua.dto.ItemSearchDto;
 import com.shop.aqua.entity.Item;
 import com.shop.aqua.entity.ItemImg;
 import com.shop.aqua.repository.ItemImgRepository;
@@ -77,5 +80,10 @@ public class ItemService {
 			itemImgService.updateItemImg(itemImgIds.get(i), itemImgFileList.get(i));
 		}
 		return item.getId();
+	}
+	
+	@Transactional(readOnly = true)
+	public Page<Item> getAdminItemPage(ItemSearchDto itemSearchDto, Pageable pageable) {
+		return itemRepository.getAdminItemPage(itemSearchDto, pageable);
 	}
 }

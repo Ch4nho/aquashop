@@ -39,7 +39,7 @@
 	<header>
 		<div id="header-first">
 			<div id="header-logo">
-				<a href="#"><img src="/resources/img/aqualogo.jpg" id="header-logo-img" /></a>
+				<a href="/"><img src="/resources/img/aqualogo.jpg" id="header-logo-img" /></a>
 			</div>
 			<form id="headerSearchForm" method="POST" action="#"> 
 				<button class="headerSearchForm-btn">
@@ -84,7 +84,7 @@
 						<a href="/admin/item/new" class="header-sub-menu">상품등록</a>
 						</sec:authorize>
 						<sec:authorize access="hasAnyAuthority('ROLE_ADMIN')">
-						<a href="#" class="header-sub-menu">상품수정</a>
+						<a href="/admin/items" class="header-sub-menu">상품관리</a>
 						</sec:authorize>
 						<sec:authorize access="hasAnyAuthority('ROLE_USER')">
 						<a href="#" class="header-sub-menu">장바구니</a>
