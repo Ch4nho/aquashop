@@ -1,0 +1,127 @@
+@charset "UTF-8";
+.writewrap {
+  max-width: 1200px;
+  margin: 0 auto; 
+  padding: 70px 20px;
+}
+.selectBox {
+  position: relative;
+  width: 100%;
+  height: 50px;
+  border-radius: 6px;
+  border: 1px solid #e6e6e6;
+}
+.detail_info-container {
+  padding: 0 16px;
+  overflow: hidden;
+}
+.detail_qna-container {
+  margin: 0 -16px;
+}
+.wrap-qna-write {
+  padding: 20px 16px;
+  background-color: #f7f7f7;
+}
+dl {
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}
+.wrap-qna-write dt:first-of-type {
+  clear: left;
+}
+.wrap-qna-write dt {
+  float: left;
+  width: 124px;
+  padding-right: 4px;
+  font-size: 18px;
+  font-weight: 400;
+}
+.wrap-qna-write dt.type {
+  padding-top: 25px;
+}
+.wrap-qna-write dd {
+  padding-left: 124px;
+  padding: 20px 0;
+}
+dd, dl, dt, li, ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+dd {
+  display: block;
+  margin-inline-start: 40px;
+}
+.wrap-qna-write dt.conts {
+  padding-top: 80px;
+}
+.wrap-qna-write dt:nth-of-type(n+2) {
+  margin-top: 0;
+}
+.wrap-qna-write dd:nth-of-type(n+2), .wrap-qna-write dt:nth-of-type(n+2) {
+  border-top: 1px solid #e6e6e6;
+}
+.wrap-qna-write dt {
+  float: left;
+  width: 124px;
+  padding-right: 4px;
+  font-size: 18px;
+  font-weight: 400;
+}
+.wrap-qna-write dd {
+  padding-left: 124px;
+}
+.wrap-qna-write .txtarea-conts {
+  width: 100%;
+  height: 146px;
+  padding: 16px;
+  border: 1px solid #e6e6e6;
+  border-radius: 6px;
+  background-color: #fff;
+  resize: vertical;
+  font-size: 18px;
+}
+.detail_qna-container .writeNoti {
+  color: #989ca1;
+  padding: 10px 4px 0;
+  font-size: 11px;
+  line-height: 15.4px;
+  word-break: keep-all;
+}
+.private {
+  padding-top: 18px;
+}
+.wrap-qna-write .chk-private {
+  display: inline-block;
+  padding-left: 22px;
+  background: url(../img/ic-btn-checkbox.svg) no-repeat left 50%;
+  background-size: 16px 16px;
+  color: #202429;
+}
+.wrap-qna-write .wrap-btn {
+  margin-top: 0;
+  padding-top: 42px;
+  border-top: 1px solid #e6e6e6;
+  text-align: center;
+}
+.wrap-qna-write .btn-cancle {
+  background-color: #fff;
+  color: #202429;
+}
+.wrap-qna-write .btn-cancle, .wrap-qna-write .btn-submit {
+  min-width: 160px;
+  margin: 0 4px;
+  padding: 18px 8px;
+  font-size: 19px;
+  font-weight: 500;
+  border: 1px solid #1e1e1e;
+  border-radius: 6px;
+  text-align: center;
+}
+.wrap-qna-write .btn-submit {
+  background-color: #1e1e1e;
+  color: #fff;
+}

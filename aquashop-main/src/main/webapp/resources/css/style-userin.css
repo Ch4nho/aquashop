@@ -1,0 +1,370 @@
+@import url("style-common.css");
+
+#login-site {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+}
+header {
+  display: block;
+}
+div {
+  display: block;
+}
+#wrap {
+  max-width: 640px;
+  margin: 0 auto;
+}
+#container {
+  min-height: calc((100vh - 375px) - 57px);
+}
+.Nb {
+  position: relative;
+  height: 56px;
+  line-height: 0;
+}
+.Nb header.navbar {
+  border-bottom: 1px solid rgb(242, 243, 245);
+}
+.hr {
+border-bottom: 3px solid #000000;
+}
+header.navbar {
+  position: static;
+  max-width: 640px;
+}
+.header-h3 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 16px;
+}
+.p-h {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  z-index: 200;
+}
+.svg-inner {
+  position: relative;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  width: 100%;
+  height: 56px;
+  padding: 0px 16px;
+  background: rgb(255, 255, 255);
+}
+.svg-in {
+    margin-right: auto;
+}
+.svg-in2 {
+    margin-left: auto;
+}
+.svg-in svg {
+    width: 28px;
+    height: 28px;
+}
+
+.login-wrap {
+    max-height: calc(100vh - 56px);
+}
+.login-text {
+    white-space: pre-line;
+}
+.login-text-inner {
+    background: transparent;
+    padding: 14px 24px 4px;
+}
+.login-title {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+
+.bold {
+    font-weight: 700;
+}
+.display2 {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 34px;
+}
+.login-h {
+    margin: 0px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    word-break: keep-all;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    padding: 0px;
+}
+.login-p {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    max-height: 40px;
+    margin: 6px 0px 0px;
+    color: rgb(122, 127, 134);
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.body2 {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+
+.login-form {
+    padding: 6px 24px;
+}
+.login-form .inputBtnId {
+    margin-bottom: 10px;
+}
+.input-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.input-form {
+    width: 100%;
+}
+.input-box {
+    position: relative;
+}
+.input-form-box {
+    width: 100%;
+    padding: 11px 16px;
+    border: 1px solid rgb(228, 230, 233);
+    background: rgb(255, 255, 255);
+    font-weight: bold;
+    color: rgb(32, 36, 41);
+    opacity: 1;
+    border-radius: 6px;
+    height: 46px;
+    font-size: 16px;
+}
+.mini {
+    width: 7em;
+}
+.input-form-box-btn {
+    display: inline-block;
+    padding: 0.5em 1em;
+    margin: 0.4em 0.15em;
+    border: 1px solid #ccc;
+    border-color: #dbdbdb #d2d2d2 #b2b2b2 #d2d2d3;
+    cursor: pointer;
+    color: #464646;
+    border-radius: 0.2em;
+    vertical-align: middle;
+    font-size: 1em;
+    line-height: 1.25em;
+}
+.middle {
+    width: 18.3em;
+}
+.mypage {
+    width: 25em;
+}
+.login-form .inputBtnPw {
+    margin-bottom: 8px;
+}
+.login-input-label {
+    display: inline-block;
+    margin: 16px 0 8px;
+}
+.login-input-essential {
+    display: inline-block;
+    overflow: hidden;
+    width: 4px;
+    height: 4px;
+    margin-top: 4px;
+    border-radius: 50%;
+    background-color: red;
+    text-indent: -9999px;
+    vertical-align: text-top;
+}
+.svg-icon2 {
+    position: absolute;
+    top: 50%;
+    right: 11px;
+    transform: translateY(-50%);
+    font-size: 0px;
+    z-index: 1;
+}
+.svg-icon2 button {
+    display: inline-block;
+    padding: 0px;
+    border: none;
+    background-color: transparent;
+    font-size: 0px;
+    cursor: pointer;
+}
+.svg-icon2 svg {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}
+.svg-icon {
+    height: auto;
+    width: 24px;
+    cursor: default;
+}
+
+
+button {
+    border: none;
+    background-color: transparent;
+    writing-mode: horizontal-tb !important;
+    text-rendering: auto;
+    letter-spacing: normal;
+    word-spacing: normal;
+    line-height: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    text-align: center;
+    cursor: default;
+}
+
+.login-form .loginBtn {
+    margin-bottom: 24px;
+}
+.loginBtn-form {
+    display: inline-flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    vertical-align: middle;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    box-sizing: border-box;
+    font-size: 0px;
+    font-weight: 700;
+    font-family: "Noto Sans KR";
+    padding: 0px 16px;
+    text-decoration: none;
+    background: rgb(32, 36, 41);
+    color: white;
+    height: 52px;
+    border-radius: 8px;
+    width: 100%;
+}
+.loginBtn-form .text {
+    letter-spacing: 0.0175em;
+}
+.button1 {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 100%;
+}
+.tB-form {
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    margin-bottom: 2px;
+}
+.tB-form button {
+    position: relative;
+    padding-right: 16px;
+}
+
+.tB-form button:first-of-type {
+    margin-left: 0px;
+}
+.tB-form button:nth-of-type(2) {
+    padding-left: 16px;
+}
+.tB-form button:last-child {
+    margin-right: 0px;
+    padding-right: 0px;
+    padding-left: 16px;
+}
+.tB-css {
+    display: inline-flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    vertical-align: middle;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    box-sizing: border-box;
+    font-size: 0px;
+    font-family: "Noto Sans KR";
+    color: rgb(32, 36, 41);
+    background: none;
+    padding: 0px;
+    text-decoration: none;
+}
+.tB-css .text {
+    padding-bottom: 2px;
+    letter-spacing: 0.0175em;
+}
+.button2 {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 100%;
+}
+.sns-text {
+    margin-top: 60px;
+    display: flex;
+    flex-wrap: nowrap;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+}
+.sns-text .before {
+    display: block;
+    width: 90px;
+    height: 1px;
+    background: rgb(207, 210, 215);
+}
+.sns-text .after {
+    display: block;
+    width: 90px;
+    height: 1px;
+    background: rgb(207, 210, 215);
+}
+
+.sns-form {
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    padding: 0px 38px;
+    margin: 22px 0px 59px;
+}
+.sns-form .ir {
+    height: 0px;
+    line-height: 0;
+    font-size: 0px;
+    overflow: hidden;
+    text-indent: -10000px;
+}
+img {
+    max-width: 100%;
+}
+.sns-form a {
+    display: inline-block;
+    margin-right: 16px;
+    cursor: pointer;
+}
+a {
+    color: inherit;
+    text-decoration: none;
+}
+.sns-form a:nth-last-of-type(1) {
+    margin: 0px;
+}

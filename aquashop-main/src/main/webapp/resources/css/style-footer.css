@@ -1,0 +1,55 @@
+@import url("style-common.css");
+
+footer {
+	bottom: 0;
+}
+
+.footer-black {
+	margin-top: 100px;
+	padding: 20px 0px;
+	height: 350px;
+	background-color: #1e1e1e;
+	display: block;
+}
+
+.footer-division-1 {
+	float: left;
+	padding: 20px;
+}
+
+.footer-division-2 {
+	float: right;
+	padding: 20px;
+}
+
+.footer-company {
+	color: rgba(255, 255, 255, 0.753);
+	font-size: 32px;
+	margin-bottom: 5px;
+	font-weight: bold;
+}
+
+.footer-tel {
+	color: rgba(255, 255, 255, 0.753);
+	font-size: 32px;
+	margin-bottom: 10px;
+	font-weight: bold;
+}
+
+.footer-text {
+	color: #e2e2e2;
+	font-size: 16px; 
+	opacity: 0.56;
+	font-weight: 500;
+}
+
+.footer-link-company {
+	margin-top: 10px;
+	color: rgba(255, 255, 255, 0.753);
+	font-weight: bold;
+	font-size: 16px;
+}
+
+.footer-sep {
+	font-size: 16px;
+}
